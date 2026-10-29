@@ -38,7 +38,7 @@ pi install npm:pi-ssh-workspace
 或从 git 安装：
 
 ```bash
-pi install git:github.com/<你的账号>/pi-ssh-workspace
+pi install git:github.com/zeguzy/pi-ssh-workspace
 ```
 
 然后带 `--ssh` 启动 pi。不带这个参数时扩展完全不生效：所有工具仍在本地，行为没有任何变化。

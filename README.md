@@ -40,7 +40,7 @@ pi install npm:pi-ssh-workspace
 Or from git:
 
 ```bash
-pi install git:github.com/<your-account>/pi-ssh-workspace
+pi install git:github.com/zeguzy/pi-ssh-workspace
 ```
 
 Then start pi with `--ssh`. Without that flag the extension does nothing at all: every tool stays
