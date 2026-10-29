@@ -21,9 +21,15 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: npm
+          registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+        env:
+          # The lockfile is generated on a machine whose default registry is an internal
+          # mirror; force the public one so runners resolve the pinned URLs.
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org
+          NPM_CONFIG_REPLACE_REGISTRY_HOST: always
 
       - name: Typecheck
         run: npm run typecheck
