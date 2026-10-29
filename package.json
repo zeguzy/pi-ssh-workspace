@@ -1,0 +1,54 @@
+{
+  "name": "pi-ssh-workspace",
+  "version": "0.1.0",
+  "description": "Route pi's read, write, edit and bash tools to a remote machine over SSH, with a /ssh-cwd command to switch the remote working directory mid-session.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "pi-extension",
+    "ssh",
+    "remote-development",
+    "remote-workspace",
+    "cloudide"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node test/run-tests.mjs local && node test/run-tests.mjs ssh",
+    "check": "npm run typecheck && npm test",
+    "prepublishOnly": "npm run check"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
