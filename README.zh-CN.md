@@ -43,7 +43,7 @@ pi install git:github.com/zeguzy/pi-ssh-workspace
 
 然后带 `--ssh` 启动 pi。不带这个参数时扩展完全不生效：所有工具仍在本地，行为没有任何变化。
 
-**依赖：** pi ≥ 1.1（已在 1.1.0 验证）· Node.js ≥ 22.19 · 到远端的 SSH 密钥认证 · 远端有 `bash`
+**依赖：** pi ≥ 1.1（已在 1.1.0 与 1.4.0 验证）· Node.js ≥ 22.19 · 到远端的 SSH 密钥认证 · 远端有 `bash`
 
 ---
 

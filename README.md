@@ -46,7 +46,7 @@ pi install git:github.com/zeguzy/pi-ssh-workspace
 Then start pi with `--ssh`. Without that flag the extension does nothing at all: every tool stays
 local, and it costs you no behaviour change.
 
-**Requires:** pi ≥ 1.1 (tested with 1.1.0) · Node.js ≥ 22.19 · SSH key auth to the remote · `bash` on the remote
+**Requires:** pi ≥ 1.1 (verified on 1.1.0 and 1.4.0) · Node.js ≥ 22.19 · SSH key auth to the remote · `bash` on the remote
 
 ---
 
