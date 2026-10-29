@@ -46,9 +46,11 @@
     "typecheck": "tsc --noEmit",
     "test": "node test/run-tests.mjs local && node test/run-tests.mjs ssh",
     "check": "npm run typecheck && npm test",
-    "prepublishOnly": "npm run check"
+    "prepublishOnly": "npm run check",
+    "release": "npm publish --otp=$OTP"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
